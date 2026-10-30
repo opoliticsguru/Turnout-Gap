@@ -19,7 +19,7 @@
             margin: 0;
         }
         </style>
-        <title>Early Voting Turnout Gap Ohio's November 3, 2026 General Election (Unofficial)</title>
+        <title>Partisan Turnout Difference in Early Voting in Ohio's November 3, 2026 General Election (Unofficial)</title>
     </head>
     <body>
         <div id="map">
@@ -131,7 +131,7 @@
             return this._div;
         };
         title.update = function () {
-            this._div.innerHTML = '<h2>Early Voting Turnout Gap Ohio\'s November 3, 2026 General Election (Unofficial)</h2>';
+            this._div.innerHTML = '<h2>Partisan Turnout Difference in Early Voting in Ohio\'s November 3, 2026 General Election (Unofficial)</h2>';
         };
         title.addTo(map);
         var abstract = new L.Control({'position':'bottomleft'});
@@ -152,7 +152,7 @@
             abstract.show = function () {
                 this._div.classList.remove("abstract");
                 this._div.classList.add("abstractUncollapsed");
-                this._div.innerHTML = '-Source: Ohio Secretary of State<br /><br />-Follow: @OPoliticsGuru<br /><br />-Total Turnout: 1388980/8001723 (17.36%)<br /><br />-Unaffiliated Turnout: 611167/5665543 (10.79%)<br /><br />-Republican Turnout: 362738/1355116 (26.77%)<br /><br />-Democratic Turnout: 412679/969142 (42.58%)<br /><br />-Libertarian Turnout: 2396/11922 (20.1%)<br /><br />-Turnout Gap: D+3.6%<br /><br />-Last Updated: 29-Oct-2026 09:16:26';
+                this._div.innerHTML = '-Source: Ohio Secretary of State<br /><br />-Follow: @OPoliticsGuru<br /><br />-Total Turnout: 1485900/8001723 (18.57%)<br /><br />-Unaffiliated Turnout: 666945/5665543 (11.77%)<br /><br />-Republican Turnout: 385174/1355116 (28.42%)<br /><br />-Democratic Turnout: 431233/969142 (44.5%)<br /><br />-Libertarian Turnout: 2548/11922 (21.37%)<br /><br />-Turnout Gap: D+3.1%<br /><br />-Last Updated: 30-Oct-2026 10:49:32';
 };
  abstract.addTo(map);
         var zoomControl = L.control.zoom({
@@ -218,23 +218,7 @@
                         <td>' + (feature.properties['Turn_L'] !== null ? autolinker.link(String(feature.properties['Turn_L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">% Unaffiliated</th>\
-                        <td>' + (feature.properties['NON%'] !== null ? autolinker.link(String(feature.properties['NON%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Republican</th>\
-                        <td>' + (feature.properties['R%'] !== null ? autolinker.link(String(feature.properties['R%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Democrat</th>\
-                        <td>' + (feature.properties['D%'] !== null ? autolinker.link(String(feature.properties['D%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Libertarian</th>\
-                        <td>' + (feature.properties['L%'] !== null ? autolinker.link(String(feature.properties['L%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Turnout Gap</th>\
+                        <th scope="row">R/D Turnout Difference</th>\
                         <td>' + (feature.properties['Gap'] !== null ? autolinker.link(String(feature.properties['Gap']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -498,23 +482,7 @@
                         <td>' + (feature.properties['Turn_L'] !== null ? autolinker.link(String(feature.properties['Turn_L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">% Unaffiliated</th>\
-                        <td>' + (feature.properties['NON%'] !== null ? autolinker.link(String(feature.properties['NON%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Republican</th>\
-                        <td>' + (feature.properties['R%'] !== null ? autolinker.link(String(feature.properties['R%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Democrat</th>\
-                        <td>' + (feature.properties['D%'] !== null ? autolinker.link(String(feature.properties['D%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Libertarian</th>\
-                        <td>' + (feature.properties['L%'] !== null ? autolinker.link(String(feature.properties['L%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Turnout Gap</th>\
+                        <th scope="row">R/D Turnout Difference</th>\
                         <td>' + (feature.properties['Gap'] !== null ? autolinker.link(String(feature.properties['Gap']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -778,23 +746,7 @@
                         <td>' + (feature.properties['Turn_L'] !== null ? autolinker.link(String(feature.properties['Turn_L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">% Unaffiliated</th>\
-                        <td>' + (feature.properties['NON%'] !== null ? autolinker.link(String(feature.properties['NON%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Republican</th>\
-                        <td>' + (feature.properties['R%'] !== null ? autolinker.link(String(feature.properties['R%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Democrat</th>\
-                        <td>' + (feature.properties['D%'] !== null ? autolinker.link(String(feature.properties['D%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Libertarian</th>\
-                        <td>' + (feature.properties['L%'] !== null ? autolinker.link(String(feature.properties['L%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Turnout Gap</th>\
+                        <th scope="row">R/D Turnout Difference</th>\
                         <td>' + (feature.properties['Gap'] !== null ? autolinker.link(String(feature.properties['Gap']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -1058,23 +1010,7 @@
                         <td>' + (feature.properties['Turn_L'] !== null ? autolinker.link(String(feature.properties['Turn_L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">% Unaffliliated</th>\
-                        <td>' + (feature.properties['%NON'] !== null ? autolinker.link(String(feature.properties['%NON']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Republican</th>\
-                        <td>' + (feature.properties['%R'] !== null ? autolinker.link(String(feature.properties['%R']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Democrat</th>\
-                        <td>' + (feature.properties['%D'] !== null ? autolinker.link(String(feature.properties['%D']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Libertarian</th>\
-                        <td>' + (feature.properties['%L'] !== null ? autolinker.link(String(feature.properties['%L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Turnout Gap</th>\
+                        <th scope="row">R/D Turnout Difference</th>\
                         <td>' + (feature.properties['Gap'] !== null ? autolinker.link(String(feature.properties['Gap']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -1338,23 +1274,7 @@
                         <td>' + (feature.properties['Turn_L'] !== null ? autolinker.link(String(feature.properties['Turn_L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">% Unaffiliated</th>\
-                        <td>' + (feature.properties['NON%'] !== null ? autolinker.link(String(feature.properties['NON%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Republican</th>\
-                        <td>' + (feature.properties['R%'] !== null ? autolinker.link(String(feature.properties['R%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Democrat</th>\
-                        <td>' + (feature.properties['D%'] !== null ? autolinker.link(String(feature.properties['D%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Libertarian</th>\
-                        <td>' + (feature.properties['L%'] !== null ? autolinker.link(String(feature.properties['L%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Turnout Gap</th>\
+                        <th scope="row">R/D Turnout Difference</th>\
                         <td>' + (feature.properties['Gap'] !== null ? autolinker.link(String(feature.properties['Gap']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -1618,23 +1538,7 @@
                         <td>' + (feature.properties['Turn_L'] !== null ? autolinker.link(String(feature.properties['Turn_L']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">% Unaffiliated</th>\
-                        <td>' + (feature.properties['NON%'] !== null ? autolinker.link(String(feature.properties['NON%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Republican</th>\
-                        <td>' + (feature.properties['R%'] !== null ? autolinker.link(String(feature.properties['R%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Democrat</th>\
-                        <td>' + (feature.properties['D%'] !== null ? autolinker.link(String(feature.properties['D%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">% Libertarian</th>\
-                        <td>' + (feature.properties['L%'] !== null ? autolinker.link(String(feature.properties['L%']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Turnout Gap</th>\
+                        <th scope="row">R/D Turnout Difference</th>\
                         <td>' + (feature.properties['Gap'] !== null ? autolinker.link(String(feature.properties['Gap']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
